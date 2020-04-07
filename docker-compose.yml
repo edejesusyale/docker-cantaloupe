@@ -18,8 +18,8 @@ services:
             ENDPOINT_IIIF_CONTENT_DISPOSITION: none
             SOURCE_STATIC: S3Source
             S3SOURCE_ENDPOINT: https://yale-image-samples.s3.amazonaws.com
-            S3SOURCE_ACCESS_KEY_ID: [YOUR ACCESS KEY ID HERE]
-            S3SOURCE_SECRET_KEY: [YOUR SECRET KEY HERE]
+            S3SOURCE_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID 
+            S3SOURCE_SECRET_KEY: $AWS_SECRET_ACCESS_KEY
             S3SOURCE_BASICLOOKUPSTRATEGY_BUCKET_NAME: ptiffs
             PROCESSOR_SELECTION_STRATEGY: ManualSelectionStrategy
             PROCESSOR_MANUAL_SELECTIONSTRATEGY_JP2: OpenJpegProcessor
@@ -29,8 +29,8 @@ services:
             CACHE_SERVER_PURGE_MISSING: "true"
             CACHE_SERVER_WORKER_ENABLED: "true"
             S3CACHE_ENDPOINT: https://yale-image-samples.s3.amazonaws.com
-            S3CACHE_ACCESS_KEY_ID: [YOUR ACCESS KEY ID HERE]
-            S3CACHE_SECRET_KEY: [YOUR SECRET KEY HERE]
+            S3CACHE_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID 
+            S3CACHE_SECRET_KEY: $AWS_SECRET_ACCESS_KEY
             S3CACHE_BUCKET_NAME: cantaloupe
             S3CACHE_OBJECT_KEY_PREFIX: cache
             LOG_APPLICATION_LEVEL: warn
